@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <BOOSTDIR>D:\Ty\Code\Libraries\boost_1_81_0</BOOSTDIR>
-    <USER_TEMP>D:\Temp</USER_TEMP>
+    <USER_TEMP>C:\Temp</USER_TEMP>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
