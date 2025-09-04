@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -407,7 +407,7 @@ void CDibSection::Show (CPaintDC* ActiveWindow, int X, int Y, int Zoom)
 
 /////////////////////////////////////////////////////////////////////////////////
 //  Name:	ShowTiled
-//	Action:	This function is pretty much a custom thing for Wally, but can be used
+//	Action:	This function is pretty much a custom thing for Weave, but can be used
 //			elsewhere if the situation calls for it.  It displays the bitmap into
 //			a tiled array (currently hard-coded to 3x3, the NumTiles is not used, 
 //			although there for future enhancements.)
@@ -746,7 +746,7 @@ BOOL CDibSection::WriteToClipboard (CWnd *pWnd)
 //  Name:	WriteToClipboardTiled
 //	Action:	Very similar to WriteToClipboard, the only difference being the image
 //			is copied Count*Count times, to form a tiled array.  This too is pretty
-//			much a custom thing for Wally.
+//			much a custom thing for Weave.
 BOOL CDibSection::WriteToClipboardTiled( CWnd* pWnd, int iCountX, int iCountY)
 {
 	double dfHold = g_dfGamma;

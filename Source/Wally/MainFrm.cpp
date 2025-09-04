@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -444,7 +444,7 @@ bool CMainFrame::RestoreWindowState()
 	TRY
 	{
 		CString strFileName ("");
-		strFileName.Format ("%s%s", g_szAppDirectory, "Wally.dat");
+		strFileName.Format ("%s%s", g_szAppDirectory, "Weave.dat");
 		CFile File( strFileName, CFile::modeRead);
 		CArchive ar( &File, CArchive::load);
 
@@ -456,7 +456,7 @@ bool CMainFrame::RestoreWindowState()
 
 		if (strSignature != strDataFileSignature)
 		{
-			AfxMessageBox( "Warning: File \"Wally.dat\" is corrupt and will be ignored.");
+			AfxMessageBox( "Warning: File \"Weave.dat\" is corrupt and will be ignored.");
 		}
 
 		g_LeftPatternToolLayerInfo.Serialize( ar, TRUE);
@@ -480,7 +480,7 @@ bool CMainFrame::RestoreWindowState()
 	CString BatchRegistryKey ("BatchSettings");
 
 	///////////////////////////////////////////
-	// Load Wally Options from the Registry //
+	// Load Weave Options from the Registry //
 	/////////////////////////////////////////
 
 	g_WildCardList.ReadRegistry();
@@ -520,12 +520,12 @@ bool CMainFrame::RestoreWindowState()
 
 void CMainFrame::SaveWindowState()
 {	
-	WriteGlobalVariables();		// Neal - BUGFIX - save now, in case Wally dies
+	WriteGlobalVariables();		// Neal - BUGFIX - save now, in case Weave dies
 
 	TRY
 	{
 		CString strFileName ("");
-		strFileName.Format ("%s%s", g_szAppDirectory, "Wally.dat");
+		strFileName.Format ("%s%s", g_szAppDirectory, "Weave.dat");
 		
 		CFile File( strFileName, CFile::modeWrite | CFile::modeCreate | CFile::modeNoTruncate);
 		CArchive ar( &File, CArchive::store);

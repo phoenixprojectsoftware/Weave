@@ -741,7 +741,7 @@ void CBatchDlg::UpdateWallyOptions ()
 		break;
 
 	default:
-		ASSERT (false);		// Unhandled Wally option
+		ASSERT (false);		// Unhandled Weave option
 		break;
 	}
 

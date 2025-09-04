@@ -1,12 +1,12 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
 //                           All rights reserved.
 //---------------------------------------------------------------------------
 //
-// Wally.cpp : Defines the class behaviors for the application.
+// Weave.cpp : Defines the class behaviors for the application.
 //
 // Created by Ty Matthews, 1-17-1998
 /////////////////////////////////////////////////////////////////////////////
@@ -101,7 +101,7 @@ Other Games And Image File Formats:
 <br>
 <font color="#ffff88">
 
-Main Wally Features:
+Main Weave Features:
 
 </font>
 <ul>
@@ -116,7 +116,7 @@ Main Wally Features:
 <br>
 <font color="#ffff88">
 
-Miscellaneous Wally Options:
+Miscellaneous Weave Options:
 
 </font>
 <ul>
@@ -294,7 +294,7 @@ void WhatsNew(void)
 	AfxMessageBox(
 //		"Neal - ALWAYS save existing text by commenting it out (for future reference)"
 //		""
-		"What's New in version 1.57 of Wally?\n"
+		"What's New in version 1.57 of Weave?\n"
 		"\n"
 		" * Image Resize can now stretch to any size (whole image only)\n"
 		" * Print and Print Preview\n"
@@ -306,7 +306,7 @@ void WhatsNew(void)
 		" * Removed legacy File Associations property page\n"
 		" * Support for custom Quake2 .wal file flags/contents using JSON\n"
 		" * This automatic \"what's new\" message\n"
-		" * Wally is now single-instance only\n"
+		" * Weave is now single-instance only\n"
 		"\n"
 		"Bugs fixed:\n"
 		"\n"
@@ -518,7 +518,7 @@ BOOL CWallyApp::InitInstance()
 	{
 		CCommandLineInfo cmdInfo;
 		ParseCommandLine(cmdInfo);
-		CSplashWnd::EnableSplashScreen(cmdInfo.m_bShowSplash);
+		// CSplashWnd::EnableSplashScreen(cmdInfo.m_bShowSplash); TODO: new splash screen maybe
 	}
 #endif
 
@@ -530,10 +530,10 @@ BOOL CWallyApp::InitInstance()
 #endif
 
 	// For the package views:
-	g_iPackageFormat = RegisterClipboardFormat("Wally package format");
+	g_iPackageFormat = RegisterClipboardFormat("Weave package format");
 
 	// For browse copy/paste moves between directories:
-	g_iBrowseCopyPasteFormat = RegisterClipboardFormat("Wally browse copy-paste format");
+	g_iBrowseCopyPasteFormat = RegisterClipboardFormat("Weave browse copy-paste format");
 
 	// Standard initialization
 	// If you are not using these features and wish to reduce the size
@@ -546,7 +546,7 @@ BOOL CWallyApp::InitInstance()
 	//Enable3dControlsStatic();	// Call this when linking to MFC statically
 #endif
 
-	// Grab the full path to Wally
+	// Grab the full path to Weave
 	char szAppDir[_MAX_PATH];
 	GetModuleFileName(NULL, szAppDir, _MAX_PATH);
 	g_szAppDirectory = GetPathToFile(szAppDir);
@@ -580,7 +580,7 @@ BOOL CWallyApp::InitInstance()
 	g_iUseDefaultQ1Palette = theApp.GetProfileInt("Settings", "Use Default Q1", 1);
 
 #if 0
-	// Ty- delete the "ShellNew" items for WADs and WALs.  WLY is now the standard Wally format
+	// Ty- delete the "ShellNew" items for WADs and WALs.  WLY is now the standard Weave format
 	char szKeys[2][10] = { ".wad", ".wal" };
 
 	for (int j = 0; j < 2; j++)
@@ -595,9 +595,9 @@ BOOL CWallyApp::InitInstance()
 		rhHelper.AddItem(&strRegApp, "", "", strExtension);
 		rhHelper.ReadRegistry();
 
-		if (!strRegApp.CompareNoCase("Wally.Document"))
+		if (!strRegApp.CompareNoCase("Weave.Document"))
 		{
-			// Only yank if Wally is the owner of this type.
+			// Only yank if Weave is the owner of this type.
 			strKeyName.Format("%s\\ShellNew", strExtension);
 			RegDeleteKey(HKEY_CLASSES_ROOT, strKeyName);
 		}
@@ -700,7 +700,7 @@ BOOL CWallyApp::InitInstance()
 		pMainFrame->ShowWindow(m_nCmdShow);
 	pMainFrame->UpdateWindow();
 
-	// Go open any files passed in (e.g. opening a file associated with Wally)
+	// Go open any files passed in (e.g. opening a file associated with Weave)
 	BeginWaitCursor();
 	if (strlen(m_lpCmdLine) > 0)
 	{
@@ -3065,7 +3065,7 @@ void CAboutDlg::OnMouseMove( UINT /*uFlags*/, CPoint ptPos)
 		switch (uHit)
 		{
 		case HIT_WWW_WALLY:
-			szStatusBarText = "Navigate to Wally's www site";
+			szStatusBarText = "Navigate to Weave's www site";
 			break;
 		case HIT_BOTH:
 			szStatusBarText = "Send email to both Ty and Neal";
@@ -3077,7 +3077,7 @@ void CAboutDlg::OnMouseMove( UINT /*uFlags*/, CPoint ptPos)
 			szStatusBarText = "Send email to Neal";
 			break;
 		case HIT_BOARD:
-			szStatusBarText = "Navigate to Wally's Discussion Board";
+			szStatusBarText = "Navigate to Weave's Discussion Board";
 			break;
 		default:
 			ASSERT( FALSE);
@@ -3129,14 +3129,14 @@ void CAboutDlg::OnLButtonDown( UINT /*uFlags*/, CPoint ptPos)
 			szAction = "http://home.telefragged.com/wally/";
 			break;
 		case HIT_BOTH:
-			szAction = "mailto:onehotseat@gmail.com;Neal_White_III@HotMail.com?subject=Wally";
+			szAction = "mailto:onehotseat@gmail.com;Neal_White_III@HotMail.com?subject=Weave";
 			break;
 		case HIT_TY:
 			// Auuuuughhhhhhhhh... I'm hit!!  I'm hit!!   Just... *cough*  ...go... on... *cough*  ... w i t h o u t    m e.....
-			szAction = "mailto:onehotseat@gmail.com?subject=Wally";
+			szAction = "mailto:onehotseat@gmail.com?subject=Weave";
 			break;
 		case HIT_NEAL:
-			szAction = "mailto:Neal_White_III@HotMail.com?subject=Wally";
+			szAction = "mailto:Neal_White_III@HotMail.com?subject=Weave";
 			break;
 		case HIT_BOARD:
 			szAction = "http://home.telefragged.com/wally/forum/index.shtml";
@@ -3336,16 +3336,16 @@ int CWallyApp::Run()
 				szCause,
 				"\nProgram is terminating.");
 
-		::MessageBox( NULL, (LPCTSTR)strError, "Wally", MB_ICONSTOP);		
+		::MessageBox( NULL, (LPCTSTR)strError, "Weave", MB_ICONSTOP);		
 	}
 	catch (CWallyException &we)
 	{
-		::MessageBox( NULL, we.GetErrorMessage(), "Wally", MB_ICONSTOP);		
+		::MessageBox( NULL, we.GetErrorMessage(), "Weave", MB_ICONSTOP);		
 	}
 	catch (boost::interprocess::interprocess_exception& ex)
 	{
 		strError.Format("Caught boost::interprocess::interprocess_exception: %s", ex.what());
-		::MessageBox(NULL, strError, "Wally", MB_ICONSTOP);
+		::MessageBox(NULL, strError, "Weave", MB_ICONSTOP);
 	}
 
 	_CrtDumpMemoryLeaks();
@@ -3368,7 +3368,7 @@ int CWallyApp::Run()
 		);		
 		
 		strError.Format( "Unhandled exception caught in CWallyApp::Run().\nGetLastError() = %lu\n%s\nPlease contact the authors.\nProgram is terminating.", dwError, (LPCTSTR)lpMsgBuf);
-		::MessageBox( NULL, (LPCTSTR)strError, "Wally", MB_ICONSTOP);
+		::MessageBox( NULL, (LPCTSTR)strError, "Weave", MB_ICONSTOP);
 		LocalFree( lpMsgBuf );
 	}
 	*/

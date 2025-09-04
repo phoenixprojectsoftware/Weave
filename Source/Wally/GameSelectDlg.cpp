@@ -110,7 +110,7 @@ BOOL CGameSelectDlg::OnInitDialog()
 		break;
 
 	case GAME_SELECT_MSG_DRAGDROP:
-		strText = "You have dragged some non-game images to Wally.  What type of texture(s) would you like to create?";
+		strText = "You have dragged some non-game images to Weave.  What type of texture(s) would you like to create?";
 		break;
 
 	case GAME_SELECT_MSG_OPEN:

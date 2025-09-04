@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -3017,7 +3017,7 @@ DWORD __stdcall ThreadFloodFill( LPVOID pvoidTool)
 		// TODO: neal - why can't we flood fill again?
 
 		//MessageBeep( MB_ICONEXCLAMATION);
-		//MessageBox( "WARNING!  Wally is now in an unstable state.\n"
+		//MessageBox( "WARNING!  Weave is now in an unstable state.\n"
 		//		"Save your work and exit NOW!");
 	}
 
@@ -4230,7 +4230,7 @@ void CTool::UseTool( CWallyView* pView, UINT nFlags, CPoint ptPos, int iMouseCod
 						bFirstWarning = FALSE;
 
 						AfxMessageBox( "Decal Tool has no data source set.  You must select a left and right button decal\n"
-									   "image for the tool to use (which will be restored the next time you run Wally).");
+									   "image for the tool to use (which will be restored the next time you run Weave).");
 					}
 					else
 					{

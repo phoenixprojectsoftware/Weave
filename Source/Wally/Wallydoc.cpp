@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -314,7 +314,7 @@ BOOL CWallyDoc::OnNewDocument()
 			break;
 
 		default:
-			ASSERT (false);		// Unhandled Wally option
+			ASSERT (false);		// Unhandled Weave option
 			break;
 		}
 
@@ -791,7 +791,7 @@ void CWallyDoc::SerializeImage (CArchive& ar)
 
 			case 32:
 				{
-AfxMessageBox( "This is a 32-bit image. Wally does not yet support editing\n"
+AfxMessageBox( "This is a 32-bit image. Weave does not yet support editing\n"
 			   "images with an alpha channel.\n\nYou should close this image NOW!");
 
 					CColorOptimizer ColorOpt;
@@ -1031,7 +1031,7 @@ void CWallyDoc::SerializePackage (bool bSaveAs, LPCTSTR szPath)
 		if (err == 0)
 		{
 			fclose (fp);
-			// It's there, let's first see if maybe it's open already in Wally			
+			// It's there, let's first see if maybe it's open already in Weave			
 
 			POSITION pos = theApp.PackageDocTemplate->GetFirstDocPosition();
 			CPackageDoc *pDoc = NULL;
@@ -1106,7 +1106,7 @@ void CWallyDoc::SerializePackage (bool bSaveAs, LPCTSTR szPath)
 				}				
 			}			
 
-			// The doc isn't open in Wally, so go open it and then write.
+			// The doc isn't open in Weave, so go open it and then write.
 
 			ihHelper.LoadImage (m_strPackageFile, IH_LOAD_ONLYPACKAGE);
 			if (ihHelper.GetErrorCode() == IH_SUCCESS)
@@ -2746,7 +2746,7 @@ bool CWallyDoc::LoadFromImageHelper (CImageHelper *pImageHelper)
 		break;
 
 	default:
-		ASSERT (false);		// Unhandled Wally Option
+		ASSERT (false);		// Unhandled Weave Option
 		break;
 
 	}		

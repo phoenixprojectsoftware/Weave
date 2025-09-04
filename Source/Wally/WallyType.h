@@ -113,7 +113,7 @@ struct WallyDirectoryEntry
 
 /*
 
-The basic concept behind the Wally (WLY) file type is that it can contain
+The basic concept behind the Weave (WLY) file type is that it can contain
 just about anything.  Normal PCX or BMP files, palettes, WAD files, custom
 WAD files, you name it.  Each entry that is put into a WLY document is considered
 one item.

@@ -85,7 +85,8 @@ void CWndMdiClient::OnPaint()
 	LPBYTE pbyData = NULL;
 	LPBYTE pbyPalette = NULL;
 
-	piImage.CreatePrefabImage( PI_WALLY_LOGO, &pbyData, &pbyPalette, COLOR_BTNSHADOW );
+	// TODO: maybe create a new version of this logo? don't know anything about pcx images though. this is OLD stuff.
+	// piImage.CreatePrefabImage( PI_WALLY_LOGO, &pbyData, &pbyPalette, COLOR_BTNSHADOW );
 
 	int w = piImage.GetImageWidth();
 	int h = piImage.GetImageHeight();

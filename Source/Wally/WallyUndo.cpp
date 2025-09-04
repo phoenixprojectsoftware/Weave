@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -428,7 +428,7 @@ BOOL CWallyUndo::RestoreState( CUndoState* pState)
 	if (pState->m_hGlobal == NULL)
 	{
 		ASSERT( FALSE);
-		AfxMessageBox( "Undo::RestoreState failed - Memory may be corrupt.\nPlease save all your work and exit Wally now!");
+		AfxMessageBox( "Undo::RestoreState failed - Memory may be corrupt.\nPlease save all your work and exit Weave now!");
 		return (FALSE);
 	}
 

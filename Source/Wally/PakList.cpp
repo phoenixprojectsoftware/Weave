@@ -2447,7 +2447,7 @@ CString CPakBase::GetError()
 
 	case PAK_ERROR_WALLY_ERROR:
 		{
-			strErrorCode = "There was an internal Wally error.  Send a bug report!\n\n";
+			strErrorCode = "There was an internal Weave error.  Send a bug report!\n\n";
 			strErrorCode += GetErrorString();
 		}
 		break;

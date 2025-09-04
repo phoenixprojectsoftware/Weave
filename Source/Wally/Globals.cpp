@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998, 1999
 //                      Ty Matthews and Neal White III,
@@ -52,7 +52,7 @@ CRegistryHelper		g_rhHelper;
 void RegisterGlobalVariables ()
 {
 	g_rhHelper.SetMainKey (HKEY_CURRENT_USER);
-	g_rhHelper.SetBaseSubKey("Software\\Team BDP\\Wally");	// Neal - TODO: is this correct?
+	g_rhHelper.SetBaseSubKey("Software\\Team BDP\\Weave");	// Neal - TODO: is this correct?
 	
 	RegisterPakVariables();
 	RegisterWallyVariables();
@@ -71,6 +71,8 @@ void ReadGlobalVariables()
 	// Neal - store last program build date in registry, 
 	// if different, bring up a "what's new" message box.
 
+	// Sabian - comment out this wack func. People don't fucking need this shit
+	/*
 	if (g_strProgramBuildDate != __DATE__)
 	{
 		WhatsNew();
@@ -79,6 +81,7 @@ void ReadGlobalVariables()
 		g_strProgramBuildDate = __DATE__;
 		g_rhHelper.WriteRegistry();
 	}
+	*/
 
 	// Validation checks for non min/max items
 	if ((g_iExportColorDepth != IH_8BIT) && (g_iExportColorDepth != IH_24BIT))
@@ -185,7 +188,7 @@ void RegisterPakVariables()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Wally globals
+// Weave globals
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int			g_iDefaultZoomValue				= 0;	// auto-zoom
@@ -264,7 +267,7 @@ BOOL		g_bBuildOptimizedPalette		= FALSE;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Wally registration
+// Weave registration
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void RegisterWallyVariables()

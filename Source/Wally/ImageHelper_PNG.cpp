@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -713,7 +713,7 @@ BOOL CImageHelper::EncodePNG ()
 
 	// Set the software creator
 	char szKey[] = "Software";
-	char szText[] = "Wally";
+	char szText[] = "Weave";
 	
 	png_text szSoftware;
 	szSoftware.compression = PNG_TEXT_COMPRESSION_NONE;

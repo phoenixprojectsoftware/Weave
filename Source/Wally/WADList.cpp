@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -102,7 +102,7 @@ CWADItem::CWADItem (unsigned char *pbyData, int iDataSize, char cType, LPCTSTR s
 		iBugSize += 768;
 
 		// iBugSize is to fix a bug I had with determining the location
-		// of the palette... our first couple releases of Wally would
+		// of the palette... our first couple releases of Weave would
 		// write the palette out at the wrong location (although it still worked.)
 		// I originally didn't add the padding at the end of the mip when
 		// saving, even though I was accounting for it when reading.

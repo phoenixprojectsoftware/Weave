@@ -279,7 +279,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -414,7 +414,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -555,7 +555,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -649,7 +649,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -714,7 +714,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -818,7 +818,7 @@ BEGIN
     BEGIN
         MENUITEM "&Help Topics",                ID_HELP_FINDER
         MENUITEM SEPARATOR
-        MENUITEM "&About Wally...",             ID_APP_ABOUT
+        MENUITEM "&About Weave...",             ID_APP_ABOUT
     END
 END
 
@@ -902,7 +902,7 @@ END
 
 IDD_ABOUTBOX DIALOG 0, 0, 291, 223
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About Wally"
+CAPTION "About Weave"
 FONT 8, "MS Sans Serif"
 BEGIN
     CONTROL         IDB_SPLASH,IDC_STATIC_BMP,"Static",SS_BITMAP,7,7,276,185
@@ -1018,7 +1018,7 @@ END
 
 IDD_WALLY_OPTIONS DIALOG 0, 0, 230, 182
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Wally Options"
+CAPTION "Weave Options"
 FONT 8, "MS Sans Serif"
 BEGIN
     EDITTEXT        IDC_EDIT_ZOOMVALUE,81,12,21,12
@@ -1070,7 +1070,7 @@ END
 
 IDD_PROPPAGE1 DIALOG 0, 0, 290, 210
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
-CAPTION "Wally"
+CAPTION "Weave"
 FONT 8, "MS Sans Serif"
 BEGIN
     CONTROL         "8-Bit",IDC_RADIO_8BIT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,13,17,29,10
@@ -1100,7 +1100,7 @@ BEGIN
     LTEXT           "Darker",IDC_STATIC,76,179,22,8
     LTEXT           "Lighter",IDC_STATIC,215,179,22,8
     GROUPBOX        "Export Options",IDC_STATIC,7,3,89,65
-    GROUPBOX        "Wally Settings",IDC_STATIC,7,73,139,71
+    GROUPBOX        "Weave Settings",IDC_STATIC,7,73,139,71
     GROUPBOX        "Browser Cache Grooming",IDC_STATIC,103,3,161,66
     LTEXT           "days",IDC_STATIC,230,18,16,8
     LTEXT           "Cache files are what the browser uses to store image thumbnails.",IDC_STATIC,119,48,137,18
@@ -1361,7 +1361,7 @@ FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
-    LTEXT           "Quake and Wally both use color index 255 for the transparency color; Unreal uses color index 0.",IDC_STATIC,4,4,120,28
+    LTEXT           "Quake and Weave both use color index 255 for the transparency color; Unreal uses color index 0.",IDC_STATIC,4,4,120,28
     LTEXT           "Click OK to swap transparency color index 0 and 255.",IDC_STATIC,4,32,120,20
 END
 
@@ -1378,7 +1378,7 @@ BEGIN
     LTEXT           "Green:",IDC_STATIC,150,79,24,8
     LTEXT           "Blue:",IDC_STATIC,150,92,24,8
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,6,120,190,40
-    LTEXT           "Select the color you wish to use.  Color index # 255 (the one on the bottom right is treated asTRANSPARENT (invisible) by Wally.  Depending on how the textures is used, game engines may or may not display this color.",IDC_STATIC,11,123,180,35
+    LTEXT           "Select the color you wish to use.  Color index # 255 (the one on the bottom right is treated asTRANSPARENT (invisible) by Weave.  Depending on how the textures is used, game engines may or may not display this color.",IDC_STATIC,11,123,180,35
     EDITTEXT        IDC_EDIT_INDEX,176,48,20,12,ES_AUTOHSCROLL | ES_READONLY
     EDITTEXT        IDC_EDIT_RED,176,64,20,12,ES_AUTOHSCROLL | ES_READONLY
     EDITTEXT        IDC_EDIT_GREEN,176,77,20,12,ES_AUTOHSCROLL | ES_READONLY
@@ -1439,7 +1439,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Free Undo Memory (Are you sure?)"
 FONT 8, "MS Sans Serif"
 BEGIN
-    LTEXT           "Freeing undo memory will discard all undo and redo actions.  This will speed up Wally if you've been working for a while and the program seems to have gotten very slow.",IDC_STATIC,7,7,200,27
+    LTEXT           "Freeing undo memory will discard all undo and redo actions.  This will speed up Weave if you've been working for a while and the program seems to have gotten very slow.",IDC_STATIC,7,7,200,27
     PUSHBUTTON      "Cancel",IDCANCEL,118,101,50,14
     DEFPUSHBUTTON   "OK",IDOK,44,101,50,14,WS_GROUP
     CONTROL         "Free undos for just the &current document",IDC_RADIO_JUST_DOC,
@@ -1500,7 +1500,7 @@ BEGIN
     CONTROL         "&New Package",IDC_RADIO_NEW_PACKAGE,"Button",BS_AUTORADIOBUTTON,14,138,60,10
     COMBOBOX        IDC_COMBO_NEW_PACKAGE,78,138,109,53,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     GROUPBOX        "",IDC_STATIC,198,7,108,153,0,0,HIDC_STATIC
-    PUSHBUTTON      "Wally &Settings",IDC_BUTTON_VIEW_OPTIONS,203,7,54,10
+    PUSHBUTTON      "Weave &Settings",IDC_BUTTON_VIEW_OPTIONS,203,7,54,10
     PUSHBUTTON      "&Go",IDC_BUTTON_GO,203,205,50,14
     DEFPUSHBUTTON   "&Close",IDOK,256,205,50,14
     LTEXT           "this is filled out in UpdateWallyOptions()",IDC_STATIC_TEXTURE_DIR,203,19,98,121
@@ -1557,7 +1557,7 @@ BEGIN
     EDITTEXT        IDC_EDIT_BLUE,42,145,20,12,ES_AUTOHSCROLL
     PUSHBUTTON      "&Blend",IDC_BUTTON_BLEND,27,159,35,11
     PUSHBUTTON      "OK",IDOK,169,256,50,14
-    LTEXT           "The textures for this game have a unique 256-color palette per texture. At the current time, Wally is strictly 8-bit editing.  This means you must have a palette already defined in order to edit with Wally.  Here's where you select that palette.",IDC_STATIC,11,10,192,32
+    LTEXT           "The textures for this game have a unique 256-color palette per texture. At the current time, Weave is strictly 8-bit editing.  This means you must have a palette already defined in order to edit with Weave.  Here's where you select that palette.",IDC_STATIC,11,10,192,32
     LTEXT           "In the near future we will be shifting to 24-bit editing, which will not impose this palette selection item.",IDC_STATIC,11,48,187,19
     PUSHBUTTON      "Button1",IDC_PALETTE,65,100,154,149
     LTEXT           "Available Palettes:",IDC_STATIC,7,73,87,8
@@ -1579,7 +1579,7 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,135,69,50,14
     LTEXT           "Enter a name for this new palette:",IDC_STATIC,7,7,117,8
     EDITTEXT        IDC_EDIT_PALETTE_NAME,7,17,178,14,ES_AUTOHSCROLL
-    LTEXT           "This new palette will be stored as a .lmp file in the ""palettes"" subdirectory located underneath your main Wally directory.",IDC_STATIC,7,37,178,27
+    LTEXT           "This new palette will be stored as a .lmp file in the ""palettes"" subdirectory located underneath your main Weave directory.",IDC_STATIC,7,37,178,27
 END
 
 IDD_PALETTE_NAME_DLG DIALOG 0, 0, 187, 93
@@ -1589,7 +1589,7 @@ FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,78,72,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,130,72,50,14
-    LTEXT           "The palette file you are loading already exists in the Palettes\\ folder under the main Wally directory.  Each palette loaded is copied there for quicker access the next time you need to use them.  Please enter a unique name for this palette file:",IDC_STATIC,7,7,168,42
+    LTEXT           "The palette file you are loading already exists in the Palettes\\ folder under the main Weave directory.  Each palette loaded is copied there for quicker access the next time you need to use them.  Please enter a unique name for this palette file:",IDC_STATIC,7,7,168,42
     EDITTEXT        IDC_EDIT_NAME,7,51,173,14,ES_AUTOHSCROLL
 END
 
@@ -1646,7 +1646,7 @@ FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,73,97,46,13
     PUSHBUTTON      "Cancel",IDCANCEL,124,97,46,13
-    LTEXT           "You have dragged some non-game images to Wally.  What type of texture(s) would you like to create?",IDC_STATIC_MESSAGE,7,7,163,23
+    LTEXT           "You have dragged some non-game images to Weave.  What type of texture(s) would you like to create?",IDC_STATIC_MESSAGE,7,7,163,23
     CONTROL         "&Always create this game type",IDC_CHECK_ALWAYS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,58,134,10
     COMBOBOX        IDC_COMBO_FILE_TYPE,7,37,163,73,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
 END
@@ -1939,7 +1939,7 @@ BEGIN
     CONTROL         "Use this palette:",IDC_RADIO_Q2_CUSTOM,"Button",BS_AUTORADIOBUTTON,13,103,66,10
     EDITTEXT        IDC_EDIT_Q2_CUSTOM,84,102,177,13,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BUTTON_Q2_CUSTOM,264,102,11,13
-    LTEXT           "Wally loads a default palette for Quake1 and Quake2 when it first starts up. \nFor Color Selection, choose the method by which the palette should be created.",IDC_STATIC,7,7,253,17
+    LTEXT           "Weave loads a default palette for Quake1 and Quake2 when it first starts up. \nFor Color Selection, choose the method by which the palette should be created.",IDC_STATIC,7,7,253,17
     CONTROL         IDB_PALETTE,IDC_STATIC,"Static",SS_BITMAP,268,7,15,14
     PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,233,189,50,14
     GROUPBOX        "Color Selection Palette",IDC_STATIC,7,129,276,51
@@ -2344,7 +2344,7 @@ CAPTION "File Associations"
 FONT 8, "MS Sans Serif"
 BEGIN
     LISTBOX         IDC_LIST_WILDCARDS,7,23,172,165,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Check the items you want to be associated with Wally:",IDC_STATIC,7,7,172,8
+    LTEXT           "Check the items you want to be associated with Weave:",IDC_STATIC,7,7,172,8
     PUSHBUTTON      "Check &All",IDC_BUTTON_CHECK_ALL,189,23,49,12
     PUSHBUTTON      "&Uncheck All",IDC_BUTTON_UNCHECK_ALL,189,38,49,12
     LTEXT           ".pcx is currently associated with",IDC_CURRENT_ASSOC,7,195,236,8
@@ -2486,7 +2486,7 @@ BEGIN
     CONTROL         "Let me edit:",IDC_RADIO_LET_ME,"Button",BS_AUTORADIOBUTTON,13,114,53,10
     EDITTEXT        IDC_EDIT_WIDTH,91,113,29,12,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDIT_HEIGHT,150,113,29,12,ES_AUTOHSCROLL
-    LTEXT           "If your image is too large for a color decal, how would you like Wally to handle it?",IDC_STATIC,13,158,277,12
+    LTEXT           "If your image is too large for a color decal, how would you like Weave to handle it?",IDC_STATIC,13,158,277,12
     CONTROL         "Reject as an error (let me fix it)",IDC_RADIO_ERROR,
                     "Button",BS_AUTORADIOBUTTON,13,172,111,10
     CONTROL         "Crop the image (data loss)",IDC_RADIO_CROP,"Button",BS_AUTORADIOBUTTON,13,183,97,10
@@ -2607,8 +2607,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,0,0,0
- PRODUCTVERSION 0,0,0,0
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -2623,14 +2623,14 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Ty & Neal"
-            VALUE "FileDescription", "Wally, Game Texture Editor"
-            VALUE "FileVersion", "1.55b"
-            VALUE "InternalName", "Wally"
-            VALUE "LegalCopyright", "© 1998-2001 Ty & Neal"
-            VALUE "OriginalFilename", "Wally.exe"
-            VALUE "ProductName", "Wally"
-            VALUE "ProductVersion", "1.55b"
+            VALUE "CompanyName", "The Phoenix Project Software SVG"
+            VALUE "FileDescription", "Game Texture Editor"
+            VALUE "FileVersion", "1.0-RC01"
+            VALUE "InternalName", "Weave"
+            VALUE "LegalCopyright", "© 2025 The Phoenix Project Software SVG. Based on Wally, modified under license from Ty & Neal. © 1998-2001 Ty & Neal"
+            VALUE "OriginalFilename", "Weave.exe"
+            VALUE "ProductName", "Weave"
+            VALUE "ProductVersion", "1.0-RC01"
         END
     END
     BLOCK "VarFileInfo"
@@ -3336,7 +3336,7 @@ END
 STRINGTABLE
 BEGIN
     ID_STATUSBAR_PROGRESS   "                                                                                                                  "
-    IDR_MAINFRAME           "Wally"
+    IDR_MAINFRAME           "Weave"
     IDR_WALLYTYPE           "\nWally\nWally\nQuake2 .wal Files (*.wal)\n.wal\n\n\n"
     IDR_PACKAGE_TYPE        "\nWally\nWally\nTexture Package Files (*.wad)\n.wad\n\n\n"
     IDR_BROWSETYPE          "\nWally\nWally\nQuake2 .wal Files (*.wal)\n.wal\n\n\n"
@@ -3347,7 +3347,7 @@ END
 
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "Wally"
+    AFX_IDS_APP_TITLE       "Weave"
     AFX_IDS_IDLEMESSAGE     "For Help, press F1"
     AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
 END
@@ -3467,7 +3467,7 @@ BEGIN
     ID_CONSTRAIN_STATUSBAR  "Horizontal"
     ID_ZOOM                 "Zoom In\nZoom In"
     ID_FILE_BROWSE          "Browse Images\nBrowse"
-    ID_VIEW_OPTIONS         "View Wally Options\nOptions"
+    ID_VIEW_OPTIONS         "View Weave Options\nOptions"
     IDS_OUT_OF_MEM          "Operation Failed -- Out of Memory"
     ID_FILE_LOAD_PALETTE    "Load Palette from disk\nLoad Palette"
     ID_TP_DROPPER           "Eye Dropper\nEye Dropper"
@@ -3586,7 +3586,7 @@ STRINGTABLE
 BEGIN
     CG_IDS_CANNOT_OPEN_CLIPBOARD "Failed to open Clipboard!"
     CG_IDS_CANNOT_GET_CLIPBOARD_DATA "Failed to get Clipboard data!"
-    IDS_PROPSHT_CAPTION     "Wally Options"
+    IDS_PROPSHT_CAPTION     "Weave Options"
 END
 
 STRINGTABLE
@@ -3735,7 +3735,7 @@ BEGIN
     ID_BUILDVIEW_POPUP_PROPERTIES "Set Texture Properties\nProperties"
     ID_BUILDVIEW_POPUP_PASTE "Paste\nPaste"
     ID_BUILDVIEW_POPUP_DELETE "Delete Texture\nDelete"
-    ID_FILE_WLY             "Wally Tree View\nDEBUG"
+    ID_FILE_WLY             "Weave Tree View\nDEBUG"
     ID_PACKAGE_NEW_IMAGE    "Create New Image in Package\nCreate New"
 END
 

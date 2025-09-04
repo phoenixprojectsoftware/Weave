@@ -18,7 +18,7 @@
 class CParseCommandLine;
 /////////////////////////////////////////////////////////////////////////////
 // CWallyApp:
-// See Wally.cpp for the implementation of this class
+// See Weave.cpp for the implementation of this class
 //
 
 #define COLOR_DEBUG_PURPLE	(IRGB( 255, 255, 0, 255))

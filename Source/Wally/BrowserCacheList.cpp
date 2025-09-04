@@ -1863,7 +1863,7 @@ BOOL CBrowserCacheList::GetHeaderFromFile (LPCTSTR szFileName)
 				default:
 					{
 						// Cache file is for a newer version. Perhaps they're
-						// using an older copy of Wally here?
+						// using an older copy of Weave here?
 						return FALSE;
 					}
 					break;

@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -51,7 +51,7 @@ CWallyPropertySheet::CWallyPropertySheet(CWnd* pWndParent)
 
 CWallyPropertySheet::~CWallyPropertySheet()
 {
-	// update registry immediately (in case Wally dies later)
+	// update registry immediately (in case Weave dies later)
 
 	CMainFrame* pWndMain = (CMainFrame* )AfxGetMainWnd();
 	pWndMain->SaveWindowState();

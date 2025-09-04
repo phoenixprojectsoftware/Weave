@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -31,7 +31,7 @@ extern CWallyApp theApp;
 ////////////////////////////////////////////////////////////////////////////////////////
 //  g_strTypeDescriptions is used by CWildCardList and CWildCardItem to fill in
 //  a linked-list of currently supported file types.  The following string array defines
-//  many things, from descriptions as they appear in Wally, to file extensions, to
+//  many things, from descriptions as they appear in Weave, to file extensions, to
 //  registry keys, et al.  The order in which they appear *directly* correlates to
 //  the #define statements located in ImageHelper.h.  If the order or the value
 //  assigned to any IH_XXX_TYPE changes, you must adjust this string table accordingly.
@@ -79,7 +79,7 @@ CString g_strTypeDescriptions[WILDCARD_LIST_LENGTH] =
 	
 	
 #ifdef _TEST
-	"Wally (*.wly)",					"Wally (*.wly)|*.wly|",								"wly",	"",						"strDestPalette_WLY",	"",								"UseCurrentDestPalette_WLY",
+	"Weave (*.wly)",					"Weave (*.wly)|*.wly|",								"wly",	"",						"strDestPalette_WLY",	"",								"UseCurrentDestPalette_WLY",
 	"CompuServe GIF (*.gif)",			"CompuServe Graphics Interchange (*.gif)|*.gif|",	"gif",	"",						"strDestPalette_GIF",	"",								"UseCurrentDestPalette_GIF",
 #endif		// #ifdef _TEST
 
@@ -423,7 +423,7 @@ void CWildCardItem::AssociateWithWally()
 	if (m_strAssociatedAppRegKey != "")
 	{		
 		rhHelper.SetMainKey( HKEY_CURRENT_USER);
-		rhHelper.SetBaseSubKey( "Software\\Team BDP\\Wally\\Old File Assocations");
+		rhHelper.SetBaseSubKey( "Software\\Team BDP\\Weave\\Old File Assocations");
 
 		rhHelper.AddItem( &m_strAssociatedAppRegKey, "", strExtension, strExtension);
 		rhHelper.WriteRegistry();
@@ -432,12 +432,12 @@ void CWildCardItem::AssociateWithWally()
 	}	
 	
 	rhHelper.SetMainKey (HKEY_CLASSES_ROOT);
-	m_strAssociatedAppRegKey = "Wally.Document";
+	m_strAssociatedAppRegKey = "Weave.Document";
 
 	rhHelper.AddItem( &m_strAssociatedAppRegKey, "", "", strExtension);
 	rhHelper.WriteRegistry();
 
-	m_strAssociatedProgram = "Wally Document";	
+	m_strAssociatedProgram = "Weave Document";	
 }
 
 void CWildCardItem::RemoveIfAssociatedWithWally()
@@ -452,11 +452,11 @@ void CWildCardItem::RemoveIfAssociatedWithWally()
 	rhHelper.AddItem (&strRegApp, "", "", strExtension);
 	rhHelper.ReadRegistry();
 
-	if (strRegApp == "Wally.Document")
+	if (strRegApp == "Weave.Document")
 	{
 		// Let's go see if we saved it off at some point
 		rhHelper.SetMainKey( HKEY_CURRENT_USER);
-		rhHelper.SetBaseSubKey( "Software\\Team BDP\\Wally\\Old File Assocations");
+		rhHelper.SetBaseSubKey( "Software\\Team BDP\\Weave\\Old File Assocations");
 		rhHelper.PurgeList();
 
 		CString strAssociation("");
@@ -1026,7 +1026,7 @@ CString CImageHelper::GetErrorText( int iCode /* = IH_NONE */ )
 		{
 			m_strErrorText += m_strFileName;
 			m_strErrorText += " contains too many frames.\n\n";
-			m_strErrorText += "Wally supports a maximum of one frame per TEX file right\n";
+			m_strErrorText += "Weave supports a maximum of one frame per TEX file right\n";
 			m_strErrorText += "now.  We are working on the next release which will\n";
 			m_strErrorText += "support multiple frames.";
 		}
@@ -1036,7 +1036,7 @@ CString CImageHelper::GetErrorText( int iCode /* = IH_NONE */ )
 		{
 			m_strErrorText += m_strFileName;
 			m_strErrorText += " contains animation data.\n\n";
-			m_strErrorText += "Wally does not fully support the TEX file format right\n";
+			m_strErrorText += "Weave does not fully support the TEX file format right\n";
 			m_strErrorText += "now.  We are working on the next release which will\n";
 			m_strErrorText += "support animation frames.";
 		}
@@ -2970,7 +2970,7 @@ BOOL CImageHelper::EncodeWAL ()
 		break;
 
 	default:
-		ASSERT (FALSE);		// Unhandled Wally option
+		ASSERT (FALSE);		// Unhandled Weave option
 		break;
 	}
 	
@@ -3438,7 +3438,7 @@ BOOL CImageHelper::EncodeM8 ()
 		break;
 
 	default:
-		ASSERT (FALSE);		// Unhandled Wally option
+		ASSERT (FALSE);		// Unhandled Weave option
 		break;
 	}
 

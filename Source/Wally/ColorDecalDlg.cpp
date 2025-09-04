@@ -1005,7 +1005,7 @@ void CColorDecalDlg::GetBlendColor( BYTE &byRed, BYTE &byGreen, BYTE &byBlue )
 	{
 		if ((iWidth * iHeight) > COLOR_DECAL_MAX_SIZE)
 		{				
-			strError.Format( "This image is too large.  Width * Height must be less than or equal to %lu.\n\nYou can have Wally automatically crop or resize the image by selecting that option in the Wizard dialog box.", COLOR_DECAL_MAX_SIZE );
+			strError.Format( "This image is too large.  Width * Height must be less than or equal to %lu.\n\nYou can have Weave automatically crop or resize the image by selecting that option in the Wizard dialog box.", COLOR_DECAL_MAX_SIZE );
 			AfxMessageBox (strError, MB_ICONSTOP);
 			return;
 		}
@@ -1014,7 +1014,7 @@ void CColorDecalDlg::GetBlendColor( BYTE &byRed, BYTE &byGreen, BYTE &byBlue )
 		dtHeight = div (iHeight, 16);
 		if ((dtWidth.rem != 0) || (dtHeight.rem != 0))
 		{
-			AfxMessageBox( "Dimensions of image on clipboard are not evenly divisible by 16.\n\nYou can have Wally fix this for you by selecting crop or resize in the Wizard dialog box.", MB_ICONSTOP );
+			AfxMessageBox( "Dimensions of image on clipboard are not evenly divisible by 16.\n\nYou can have Weave fix this for you by selecting crop or resize in the Wizard dialog box.", MB_ICONSTOP );
 			return;
 		}
 

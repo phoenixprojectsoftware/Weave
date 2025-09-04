@@ -16,6 +16,7 @@
     <ProjectGuid>{c8cbbe7e-18d6-4257-81c8-af3f05643cb3}</ProjectGuid>
     <RootNamespace>Wally</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Weave</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

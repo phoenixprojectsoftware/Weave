@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -1716,7 +1716,7 @@ BOOL CWallyPropertyPage7::OnInitDialog()
 				iItemAdded = m_lbWildCards.AddString (pItem->GetDescription());
 				m_lbWildCards.SetItemData (iItemAdded, (ULONG)pItem);
 
-				if (pItem->GetAssociatedProgram() == "Wally Document")
+				if (pItem->GetAssociatedProgram() == "Weave Document")
 				{
 					m_lbWildCards.SetCheck (iItemAdded, 1);
 				}
@@ -1793,7 +1793,7 @@ void CWallyPropertyPage7::OnOK()
 		{
 			if (m_lbWildCards.GetCheck (j) == 1)
 			{		
-				if (pItem->GetAssociatedProgram() != "Wally Document")
+				if (pItem->GetAssociatedProgram() != "Weave Document")
 				{
 					pItem->AssociateWithWally();
 				}
@@ -1814,15 +1814,15 @@ Neal - TODO - think of some kind of fix for the following issue:
 I'm sorry you're having trouble.  The way Windows normally works
 is that a file extension like ".bmp" is "owned" by whichever program
 last asked to be the owner.  When you set the checkbox and click OK,
-Wally asks for ownership, which is nicer than most Windows programs 
+Weave asks for ownership, which is nicer than most Windows programs 
 that just take ownership of every kind of file that they can read.
 
 The problem is that there's no real way to "unrequest" ownership.
 You can do that with RegEdit, but then when you double-click a bmp
 file Windows will just tell you that it's an unrecognized file type.
-That's just the way Microsoft designed Windows to work.  Wally could
+That's just the way Microsoft designed Windows to work.  Weave could
 do the same thing, but you still won't be able to double-click the 
-file to run it in another program.  Wally just can't know what 
+file to run it in another program.  Weave just can't know what 
 program should now have ownership.  It's a Windows design problem.
 
 What you need to do is re-install the program you want to "own" bmp

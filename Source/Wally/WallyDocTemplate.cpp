@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -25,7 +25,7 @@ extern BOOL g_bAutoRemip;
 //  Name:		OpenDocumentFile
 //  Action:		This is an override of the default CMultiDocTemplate::OpenDocumentFile
 //				function.  This is needed because the user is allowed to drag-n-drop
-//				image files directly to the Wally desktop.  When MFC handles those 
+//				image files directly to the Weave desktop.  When MFC handles those 
 //				drag-n-dropped files, it doesn't care what the format or extension
 //				of the file is... it will attempt to open the document regardless,
 //				.wal or not a .wal.  This of course causes problems when the image 

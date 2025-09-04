@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -720,7 +720,7 @@ int CFilter::ShowSettingsDlg( CLayer* pLayer)
 
 	if (iRet == IDOK)
 	{
-		// update registry imediately (in case Wally dies later)
+		// update registry imediately (in case Weave dies later)
 
 		CMainFrame* pWndMain = (CMainFrame* )AfxGetMainWnd();
 		pWndMain->SaveWindowState();

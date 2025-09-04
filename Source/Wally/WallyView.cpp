@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////
-//                           Wally the WAL Editor
+//                           Weave the WAL Editor
 //---------------------------------------------------------------------------
 //                             © Copyright 1998,
 //                      Ty Matthews and Neal White III,
@@ -1947,7 +1947,7 @@ void CWallyView::OnEditPaste()
 						if ((iWidth >= pDoc->GetWidth()) && (iHeight >= pDoc->GetHeight()))
 						{
 							if (IDYES == MessageBox( _T("Do you wish to copy the palette from the clipboard as well?"),
-										_T("Wally - Clipboard Query"), MB_YESNO))
+										_T("Weave - Clipboard Query"), MB_YESNO))
 							{
 								for (j = 0; j < 256; j++)
 								{
@@ -3420,7 +3420,7 @@ void CWallyView::OnEditCopyTiled()
 		g_iNumHorizontalTiles = GetNumber.m_iHorizontalTiles;
 		g_iNumVerticalTiles   = GetNumber.m_iVerticalTiles;
 
-		// update registry imediately (in case Wally dies later)
+		// update registry imediately (in case Weave dies later)
 
 		CMainFrame* pWndMain = (CMainFrame* )AfxGetMainWnd();
 		pWndMain->SaveWindowState();
@@ -4171,7 +4171,7 @@ void CWallyView::OnUpdateImageReduceColors( CCmdUI* pCmdUI)
 
 void CWallyView::OnViewOptions() 
 {
-	// neal - yes, this function IS supposed to be in Wally.cpp also
+	// neal - yes, this function IS supposed to be in Weave.cpp also
 
 	CWallyPropertySheet propSheet;
 

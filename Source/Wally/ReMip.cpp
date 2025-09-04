@@ -14,7 +14,7 @@
 #include "ImageHelper.h"
 #include "WallyPal.h"
 
-#define WALLY 1		// in Wally?
+#define WALLY 1		// in Weave?
 
 #ifndef WALLY
 	char g_szErrorString[400];
