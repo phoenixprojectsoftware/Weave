@@ -7,7 +7,7 @@ The goal is to modernise the program. PNG support has already been added, with f
 ```
 Copyright (c) 2025 The Phoenix Project Software SVG.
 
-Based on Wally, modified under license from Ty Matthews & Neal White III. Copyright (c) 1998 Ty Matthews and Neal White III
+Based on Wally, modified under license from Ty Matthews & Neal White III. Copyright (c) 1998-2001 Ty Matthews and Neal White III
 
 Licensed under the MIT License (the "License"); you may not use this file except
 in compliance with the License. You may obtain a copy of the License at
